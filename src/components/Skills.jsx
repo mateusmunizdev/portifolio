@@ -13,8 +13,9 @@ const Skills = () => {
       category: "Frontend",
       icon: <Globe className="w-6 h-6" />,
       technologies: [
-        { name: "React", level: "Intermediário" },
+        { name: "React", level: "Avançado" },
         { name: "JavaScript", level: "Intermediário" },
+        { name: "TypeScript", level: "Intermediário" },
         { name: "HTML5", level: "Avançado" },
         { name: "CSS3", level: "Avançado" },
         { name: "Tailwind CSS", level: "Intermediário" },

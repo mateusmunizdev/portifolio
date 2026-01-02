@@ -5,6 +5,7 @@ import Landinpage from "../assets/img/img-projects/Landinpage.png";
 import Ecomerce from "../assets/img/img-projects/E-Comerce.png";
 import CardapioSopa from "../assets/img/img-projects/CardapioDigitalSopas.png";
 import PrevisaoDoTempo from "../assets/img/img-projects/PrevisaoDoTempo.png";
+import CardProfissional from "../assets/img/img-projects/CardProfissional.png";
 
 const ProjectsPage = () => {
   const projects = [
@@ -66,6 +67,21 @@ const ProjectsPage = () => {
       ],
 
       live: "https://previdotemp.netlify.app/",
+    },
+    {
+      title: "Cartão Digital Profissional",
+      description:
+        "Cartão de apresentação online para profissionais como médicos, advogados e contadores, com foto, informações de contato, redes sociais e botão de ação para facilitar o atendimento.",
+      image: CardProfissional,
+      technologies: [
+        "React",
+        "CSS",
+        "TypeScript",
+        "Tailwind CSS",
+        "Componentização",
+        "Design Responsivo",
+      ],
+      live: "https://profissao.netlify.app/",
     },
   ];
 

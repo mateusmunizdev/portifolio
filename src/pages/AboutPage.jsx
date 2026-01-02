@@ -13,7 +13,7 @@ const AboutPage = () => {
             <p>
               Sou um{" "}
               <strong className="text-cyan-500 italic font-medium">
-                desenvolvedor web júnior
+                desenvolvedor web
               </strong>
               , dedicado a dominar as tecnologias mais relevantes do
               desenvolvimento web moderno. Minha jornada na programação começou

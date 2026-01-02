@@ -16,7 +16,7 @@ const About = () => {
             <p>
               Sou um{" "}
               <strong className="text-cyan-500 italic font-medium">
-                desenvolvedor web júnior
+                desenvolvedor web
               </strong>
               , dedicado a dominar as tecnologias mais relevantes do
               desenvolvimento web moderno. Minha jornada na programação começou
@@ -36,7 +36,7 @@ const About = () => {
               Estou constantemente aprendendo e aprimorando minhas habilidades
               em{" "}
               <strong className="text-cyan-500 italic font-medium">
-                React, JavaScript, HTML, CSS, Tailwind CSS
+                React, JavaScript,TypeScript, Node.js,HTML, CSS, Tailwind CSS
               </strong>{" "}
               e outras tecnologias modernas, sempre buscando escrever código
               limpo, eficiente e de fácil manutenção.
