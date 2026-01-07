@@ -16,15 +16,7 @@ const Projects = () => {
       technologies: ["React", "JavaScript", "SupaBase", "Tailwind CSS"],
       live: "https://agendacorte.vercel.app/",
     },
-    {
-      title: "Saas CardAppio",
-      description:
-        "Plataforma SaaS para pizzarias, com gerenciamento de produtos e cardápio digital para clientes, facilitando pedidos e controle de vendas.",
-      image: SaasCardAppio,
-      technologies: ["React", "JavaScript", "Tailwind CSS", "FireBase"],
 
-      live: "https://my-cardappio.vercel.app/",
-    },
     {
       title: "Landing Page Pessoal",
       description:
@@ -42,45 +34,6 @@ const Projects = () => {
       technologies: ["HTML", "CSS", "JavaScript"],
 
       live: "https://eleganzamodas.netlify.app/",
-    },
-    {
-      title: "Cardápio digital interativo",
-      description:
-        "Cardápio digital para sopas e caldos, permitindo que clientes vejam opções, ingredientes e façam pedidos de forma prática.",
-      image: CardapioSopa,
-      technologies: ["React", "JavaScript", "Tailwind CSS"],
-
-      live: "https://demo-cardapio.netlify.app/",
-    },
-    {
-      title: "Weather App",
-      description:
-        "Aplicativo de previsão do tempo com geolocalização, busca por cidade e interface intuitiva e elegante.",
-      image: PrevisaoDoTempo,
-      technologies: [
-        "React",
-        "CSS",
-        "Tailwind CSS",
-        "Geolocation",
-        "API REST ",
-      ],
-
-      live: "https://previdotemp.netlify.app/",
-    },
-    {
-      title: "Cartão Digital Profissional",
-      description:
-        "Cartão de apresentação online para profissionais como médicos, advogados e contadores, com foto, informações de contato, redes sociais e botão de ação para facilitar o atendimento.",
-      image: CardProfissional,
-      technologies: [
-        "React",
-        "CSS",
-        "TypeScript",
-        "Tailwind CSS",
-        "Componentização",
-        "Design Responsivo",
-      ],
-      live: "https://profissao.netlify.app/",
     },
   ];
 
