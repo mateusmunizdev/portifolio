@@ -41,24 +41,12 @@ const Navbar = () => {
     <nav
       className={`fixed p-3 top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-gray-800/90 backdrop-blur-sm shadow-md"
-          : "bg-gray-800/50"
+          ? "bg-gray-800/90 backdrop-blur-md shadow-md"
+          : "bg-gray-800/40 backdrop-blur-md"
       }`}
     >
       <div className="mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
-          <a
-            href="#hero"
-            className="relative p-2 rounded-2xl bg-slate-900 flex items-center justify-center shadow-xl hover:scale-110 transition-transform duration-300 border-2 border-cyan-400"
-            onClick={handleClick}
-          >
-            <span
-              className="text-xl font-black text-cyan-400"
-              style={{ textShadow: "0 0 20px rgba(34, 211, 238, 0.8)" }}
-            >
-              MM
-            </span>
-          </a>
+        <div className="flex items-center md:justify-center h-16">
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-10">
             {menuItems.map((item) => {
@@ -70,10 +58,12 @@ const Navbar = () => {
                   onClick={() => {
                     handleClick();
                   }}
-                  className=" hover:scale-105 transition-all duration-200 flex gap-2 items-center justify-center p-2 rounded-md "
+                  className="nav-link hover:scale-105 transition-all duration-200 flex gap-2 items-center justify-center p-2 rounded-md "
                 >
-                  <Icon className="text-cyan-500" size={18} />{" "}
-                  <span>{item.name}</span>
+                  <div className="flex gap-2 justify-center items-center">
+                    <Icon className="text-cyan-500" size={18} />{" "}
+                    <span>{item.name}</span>
+                  </div>
                 </NavLink>
               );
             })}

@@ -2,6 +2,7 @@ import { ExternalLink, Github } from "lucide-react";
 import BoraCortar from "../assets/img/img-projects/BoraCortar.png";
 import SaasCardAppio from "../assets/img/img-projects/SaasCardAppio.png";
 import Landinpage from "../assets/img/img-projects/Landinpage.png";
+import Site from "../assets/img/img-projects/Site-adv.png";
 import Ecomerce from "../assets/img/img-projects/E-Comerce.png";
 import CardapioSopa from "../assets/img/img-projects/CardapioDigitalSopas.png";
 import PrevisaoDoTempo from "../assets/img/img-projects/PrevisaoDoTempo.png";
@@ -16,6 +17,15 @@ const ProjectsPage = () => {
       image: BoraCortar,
       technologies: ["React", "JavaScript", "SupaBase", "Tailwind CSS"],
       live: "https://agendacorte.vercel.app/",
+    },
+    {
+      title: "Site institucional para advogados",
+      description:
+        "Página de apresentação de escritório de advocacia, destacando áreas de atuação e informações de contato.",
+      image: Site,
+      technologies: ["React", "Tailwind CSS", "JavaScript"],
+
+      live: "https://adv-institucional.netlify.app/",
     },
     {
       title: "Saas CardAppio",

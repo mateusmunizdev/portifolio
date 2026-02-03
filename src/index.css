@@ -10,12 +10,29 @@ body {
   color: #f5f5f5;
   font-family: "Poppins", sans-serif;
 }
-.active{
-  background-color: #00b7db71;
+.nav-link{
+display: inline-block;
+position: relative; 
+
  
 }
-
-
+.nav-link::after{
+  content: '';
+  display: block;
+  width: 0%;
+  height: 2px;
+  background-color: #00b8db;
+  margin-top: 8px;
+}
+.nav-link:hover::after{
+  width: 100%;
+  transition: width 0.3s ease-in-out;
+}
+.active{
+  font-weight: 600;
+  color: #00b8db;
+  
+}
 
 @keyframes fade-in {
   0% {

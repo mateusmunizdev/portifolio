@@ -14,9 +14,14 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="min-h-screen flex items-center justify-center p-4 scroll-mt-nav"
+      className="relative min-h-screen flex items-center justify-center p-4 scroll-mt-nav"
     >
-      <div className="container mx-auto mt-30 text-center fade-in">
+      <img
+        src="https://imgs.search.brave.com/7on62KozCsU4R5nEjEvpMKTzZSKZTTZDksGI4HozzHA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/Zm90b3MtZ3JhdGlz/L2NvbGFnZW0tZGUt/ZnVuZG8tZGUtcHJv/Z3JhbWFjYW9fMjMt/MjE0OTkwMTc4OS5q/cGc_c2VtdD1haXNf/aHlicmlkJnc9NzQw/JnE9ODA"
+        alt="Fundo Hero"
+        className="absolute inset-0 w-full h-full object-cover opacity-10 "
+      />
+      <div className="container mx-auto mt-30 text-center fade-in ">
         <div className="container mx-auto">
           <img
             src={fotoPErfil}

@@ -9,7 +9,7 @@ const AboutPage = () => {
               eu
             </span>
           </h1>
-          <div className="space-y-6 text-md md:text-lg text-[#98a6b3] animate-slide-up">
+          <div className="space-y-6 text-md md:text-lg text-[#98a6b3] animate-slide-up text-justify">
             <p>
               Sou um{" "}
               <strong className="text-cyan-500 italic font-medium">
