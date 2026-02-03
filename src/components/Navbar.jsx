@@ -39,10 +39,10 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed p-3 top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed md:p-3 p-1 top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
           ? "bg-gray-800/90 backdrop-blur-md shadow-md"
-          : "bg-gray-800/40 backdrop-blur-md"
+          : "md:bg-gray-800/20 bg-transparent md:backdrop-blur-md"
       }`}
     >
       <div className="mx-auto px-4">
@@ -71,10 +71,10 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-cyan-500 transition-colors"
+            className="md:hidden text-cyan-500 transition-colors animate-pulse"
             aria-label="Toggle menu"
           >
-            {isOpen ? "" : <Menu size={28} />}
+            {isOpen ? "" : <Menu size={30} strokeWidth={3} />}
           </button>
         </div>
 
