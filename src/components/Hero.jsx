@@ -1,7 +1,8 @@
 import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
-import fotoPErfil from "../assets/img/perfil.png";
 import { FaWhatsapp } from "react-icons/fa";
 import { Link } from "react-router-dom";
+
+const fotoPerfil = new URL("../assets/img/perfil.png", import.meta.url).href;
 
 const Hero = () => {
   const handleContactClick = () => {
@@ -23,11 +24,17 @@ const Hero = () => {
       />
       <div className="container mx-auto mt-30 text-center fade-in ">
         <div className="container mx-auto">
-          <img
-            src={fotoPErfil}
-            alt="Foto de perfil"
-            className="md:w-[250px] md:h-[250px] w-[180px] h-[180px] mx-auto object-cover rounded-full flutuar  shadow-cyan-500"
-          />
+          <div className="md:w-[280px] md:h-[280px] w-[220px] h-[220px] mx-auto relative flex items-center justify-center">
+            <div className="md:w-[270px] md:h-[270px] w-[205px] h-[205px] relative flex items-center rounded-3xl rotate-6 justify-center bg-gray-700/40">
+              <div className=" md:w-[270px] md:h-[270px] w-[205px] h-[205px] flex items-center rounded-3xl -rotate-6 justify-center bg-gray-700/40">
+                <img
+                  src={fotoPerfil}
+                  alt="Foto de perfil"
+                  className="relative md:w-[250px] md:h-[250px] w-[180px] h-[180px] object-contain rounded-3xl shadow-lg  z-10"
+                />
+              </div>
+            </div>
+          </div>
         </div>
         <div className="mb-6 mt-10">
           <h1 className="mb-4 md:text-5xl text-3xl">
