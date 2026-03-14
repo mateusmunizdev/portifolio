@@ -39,10 +39,10 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed md:p-3 p-1 top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-gray-800/90 backdrop-blur-md shadow-md"
-          : "md:bg-gray-800/20 bg-transparent md:backdrop-blur-md"
+          ? "bg-[#111317]/80 backdrop-blur-md border-b border-gray-800/50 py-3"
+          : "bg-transparent py-5"
       }`}
     >
       <div className="mx-auto px-4">
@@ -58,10 +58,10 @@ const Navbar = () => {
                   onClick={() => {
                     handleClick();
                   }}
-                  className="nav-link hover:scale-105 transition-all duration-200 flex gap-2 items-center justify-center p-2 rounded-md "
+                  className="nav-link transition-all duration-200 flex gap-2 items-center justify-center p-2 text-sm"
                 >
                   <div className="flex gap-2 justify-center items-center">
-                    <Icon className="text-cyan-500" size={18} />{" "}
+                    <Icon className="text-gray-500" size={16} strokeWidth={1.5} />{" "}
                     <span>{item.name}</span>
                   </div>
                 </NavLink>
@@ -71,10 +71,10 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-cyan-500 transition-colors animate-pulse"
+            className="md:hidden text-gray-400 hover:text-white transition-colors"
             aria-label="Toggle menu"
           >
-            {isOpen ? "" : <Menu size={30} strokeWidth={3} />}
+            {isOpen ? "" : <Menu size={24} strokeWidth={1.5} />}
           </button>
         </div>
 
@@ -94,8 +94,9 @@ const Navbar = () => {
         >
           <X
             size={24}
+            strokeWidth={1.5}
             onClick={() => setIsOpen(!isOpen)}
-            className=" float-end mx-5 text-cyan-500 bg-cyan-500/20 rounded-md"
+            className="float-end mx-5 text-gray-400 hover:text-white cursor-pointer"
           />
           <div className="flex flex-col space-y-4 w-full py-4 mt-2">
             {menuItems.map((item) => {
@@ -108,13 +109,13 @@ const Navbar = () => {
                     handleClick();
                   }}
                   key={item.name}
-                  className="text-foreground hover:text-primary transition-colors duration-300 py-2 flex items-center justify-between p-2 "
+                  className="text-gray-400 hover:text-white transition-colors duration-300 py-3 flex items-center justify-between px-4 text-sm font-light border-b border-gray-800/50"
                 >
-                  <div className="flex gap-2 justify-start items-center">
-                    <Icon size={18} className="text-cyan-500" />{" "}
+                  <div className="flex gap-3 justify-start items-center">
+                    <Icon size={16} strokeWidth={1.5} className="text-cyan-500/70" />{" "}
                     <span>{item.name}</span>
                   </div>
-                  <ChevronRight className="text-cyan-500" />
+                  <ChevronRight size={16} className="text-gray-600" />
                 </NavLink>
               );
             })}

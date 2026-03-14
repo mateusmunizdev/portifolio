@@ -14,6 +14,7 @@ const Skills = () => {
       icon: <Globe className="w-6 h-6" />,
       technologies: [
         { name: "React", level: "Avançado" },
+        { name: "Next.js", level: "Intermediário" },
         { name: "JavaScript", level: "Intermediário" },
         { name: "TypeScript", level: "Intermediário" },
         { name: "HTML5", level: "Avançado" },
@@ -67,15 +68,11 @@ const Skills = () => {
     <section id="skills" className="scroll-mt-nav py-8 fade-down">
       <div className="container mx-auto p-4">
         <div className="text-center mb-16">
-          <h1 className="mb-8 md:text-5xl text-3xl flex gap-2 justify-center items-center">
-            <span>Minhas</span>
-            <span className="bg-gradient-to-r from-cyan-700 via-cyan-600 to-cyan-500 bg-clip-text text-transparent text-nowrap font-bold">
-              Especialidades
-            </span>
-          </h1>
-          <p className="text-md text-[#98a6b3]  max-w-2xl mx-auto">
-            Tecnologias e ferramentas que utilizo para criar soluções web
-            modernas e eficientes
+          <h2 className="mb-4 text-3xl md:text-5xl font-light tracking-tight">
+            Minhas <span className="font-medium text-white">Especialidades</span>
+          </h2>
+          <p className="text-sm text-gray-500 max-w-xl mx-auto font-light">
+            Tecnologias e ferramentas que utilizo para criar aplicações de alto nível.
           </p>
         </div>
 
@@ -83,21 +80,21 @@ const Skills = () => {
           {skills.map((skill, index) => (
             <div
               key={skill.category}
-              className="bg-[#1a1d23] rounded-lg p-6 shadow-lg shadow-cyan-500/10 hover:shadow-cyan-500/20 transition-all duration-300 hover:scale-105 animate-slide-up"
+              className="bg-transparent border border-gray-800 rounded-lg p-8 transition-all duration-300 hover:border-cyan-500/50 hover:bg-[#15181e] animate-slide-up"
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              <div className="flex items-center gap-3 mb-4">
+              <div className="flex items-center gap-3 mb-6 border-b border-gray-800 pb-4">
                 <div className="text-cyan-500">{skill.icon}</div>
-                <h3 className="text-xl font-bold">{skill.category}</h3>
+                <h3 className="text-lg font-medium text-white">{skill.category}</h3>
               </div>
-              <div className="space-y-3">
+              <div className="space-y-4">
                 {skill.technologies.map((tech) => (
                   <div
                     key={tech.name}
                     className="flex justify-between items-center"
                   >
-                    <span className=" font-medium">{tech.name}</span>
-                    <span className={`text-xs ${getLevelColor(tech.level)}`}>
+                    <span className="text-gray-300 font-light text-sm">{tech.name}</span>
+                    <span className={`text-xs uppercase tracking-widest ${getLevelColor(tech.level)}`}>
                       {tech.level}
                     </span>
                   </div>
@@ -111,6 +108,7 @@ const Skills = () => {
         <div className="mt-12 flex flex-wrap justify-center gap-3">
           {[
             "React",
+            "Next.js",
             "JavaScript",
             "TypeScript",
             "Node.js",

@@ -2,50 +2,33 @@ const About = () => {
   return (
     <section
       id="about"
-      className="bg-[#181a1f] scroll-mt-nav mb-8 py-8 fade-in"
+      className="scroll-mt-nav mb-8 py-20 fade-in"
     >
       <div className="container mx-auto p-4 ">
         <div className="max-w-3xl mx-auto text-center p-2 ">
-          <h1 className="mb-8 md:text-5xl text-3xl flex gap-2 justify-center items-center">
-            <span>Quem sou</span>
-            <span className="bg-gradient-to-r from-cyan-700 via-cyan-600 to-cyan-500 bg-clip-text text-transparent text-nowrap font-bold">
-              eu
-            </span>
-          </h1>
-          <div className="flex ">
-            <div className="space-y-6 text-md md:text-lg text-[#98a6b3] animate-slide-up text-justify">
+          <h2 className="mb-12 text-3xl md:text-5xl font-light tracking-tight">
+            Quem <span className="text-white font-medium">Sou Eu</span>
+          </h2>
+          <div className="flex">
+            <div className="space-y-8 text-base md:text-lg text-gray-400 animate-slide-up text-left font-light leading-relaxed">
               <p>
-                Sou um{" "}
-                <strong className="text-cyan-500 italic font-medium">
-                  desenvolvedor web
-                </strong>
-                , dedicado a dominar as tecnologias mais relevantes do
-                desenvolvimento web moderno. Minha jornada na programação
-                começou com uma profunda curiosidade sobre como a tecnologia
-                pode transformar ideias em soluções reais.
+                Sou <strong className="text-white font-medium">desenvolvedor front-end</strong> dedicado a criar
+                aplicações web que unem design inteligente e excelente performance. Minha transição
+                para a tecnologia começou pela curiosidade em entender como ferramentas digitais
+                poderiam resolver problemas reais de forma elegante e escalável.
               </p>
               <p>
-                Com experiência prévia na área de{" "}
-                <strong className="text-cyan-500 italic font-medium">
-                  telecomunicações
-                </strong>
-                , desenvolvi habilidades valiosas em resolução de problemas,
-                trabalho em equipe e comunicação eficaz. Hoje, combino essa
-                bagagem profissional com minha paixão por desenvolvimento web.
+                Com uma base anterior sólida no setor de <strong className="text-white font-medium">telecomunicações</strong>, 
+                trouxe comigo habilidades essenciais: visão sistêmica, rápida resolução de
+                incidentes críticos e comunicação alinhada com as necessidades dos clientes e das equipes.
               </p>
               <p>
-                Estou constantemente aprendendo e aprimorando minhas habilidades
-                em{" "}
-                <strong className="text-cyan-500 italic font-medium">
-                  React, JavaScript,TypeScript, Node.js,HTML, CSS, Tailwind CSS
-                </strong>{" "}
-                e outras tecnologias modernas, sempre buscando escrever código
-                limpo, eficiente e de fácil manutenção.
+                Atualmente, meu foco principal se baseia no ecossistema moderno: <strong className="text-cyan-500 font-medium tracking-wide">React, Next.js, TypeScript e Tailwind CSS</strong>.
+                Priorizo arquiteturas maduras e código limpo, sempre atento à acessibilidade e responsividade.
               </p>
               <p>
-                Meu objetivo é crescer como desenvolvedor web e contribuir para
-                projetos que façam diferença, sempre mantendo o foco na
-                qualidade e nas melhores práticas do mercado.
+                Busco desafios onde eu possa arquitetar soluções front-end de impacto,
+                ajudando empresas a entregar interfaces impecáveis para seus usuários.
               </p>
             </div>
           </div>

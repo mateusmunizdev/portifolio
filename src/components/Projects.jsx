@@ -14,7 +14,7 @@ const Projects = () => {
       description:
         "Sistema web para agendamento de cortes de cabelo e barba, permitindo selecionar horários, serviços e confirmar online de forma prática.",
       image: BoraCortar,
-      technologies: ["React", "JavaScript", "SupaBase", "Tailwind CSS"],
+      technologies: ["Next.js", "React", "TypeScript", "SupaBase", "Tailwind CSS"],
       live: "https://agendacorte.vercel.app/",
     },
 
@@ -49,18 +49,14 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="bg-[#1a1d23] scroll-mt-nav py-8 mt-8">
+    <section id="projects" className="scroll-mt-nav py-20">
       <div className="container mx-auto p-4">
-        <div className="text-center mb-10">
-          <h1 className="mb-8 md:text-5xl text-3xl flex gap-2 justify-center items-center">
-            <span>Meus</span>
-            <span className="bg-gradient-to-r p-2 from-cyan-700 via-cyan-600 to-cyan-500 bg-clip-text text-transparent text-nowrap font-bold">
-              Projetos
-            </span>
-          </h1>
-          <p className="text-md text-[#98a6b3] max-w-2xl mx-auto">
-            Alguns projetos que desenvolvi para demonstrar minhas habilidades e
-            paixão por programação
+        <div className="text-center mb-16">
+          <h2 className="mb-4 text-3xl md:text-5xl font-light tracking-tight">
+            Meus <span className="font-medium text-white">Projetos</span>
+          </h2>
+          <p className="text-sm text-gray-500 max-w-xl mx-auto font-light">
+            Soluções que desenvolvi para resolver problemas reais com código limpo e eficiência.
           </p>
         </div>
 
@@ -68,47 +64,42 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div
               key={project.title}
-              className="bg-[#1a1d23] rounded-lg overflow-hidden shadow-lg shadow-[#30353d] hover:shadow-cyan-500/40 hover:scale-105 transition-all duration-300 card-hover animate-slide-up"
+              className="bg-transparent border border-gray-800 rounded-lg overflow-hidden transition-all duration-300 hover:border-cyan-500/30 hover:-translate-y-1 animate-slide-up group"
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              <div className="relative overflow-hidden h-48">
+              <div className="relative overflow-hidden h-48 border-b border-gray-800">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                  className="w-full h-full object-cover grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500"
                   loading="lazy"
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                <p className="text-[#98a6b3] mb-4 text-xs">
+                <h3 className="text-lg font-medium text-white mb-2">{project.title}</h3>
+                <p className="text-gray-400 mb-6 font-light text-sm leading-relaxed">
                   {project.description}
                 </p>
-                <div className="flex flex-wrap gap-2 mb-4">
+                <div className="flex flex-wrap gap-2 mb-6">
                   {project.technologies.map((tech) => (
                     <span
                       key={tech}
-                      className="px-3 py-1 bg-[#282c33] text-xs rounded-full"
+                      className="px-2 py-1 border border-gray-800 text-gray-400 text-[10px] uppercase tracking-wider rounded"
                     >
                       {tech}
                     </span>
                   ))}
                 </div>
-                <div className="flex gap-3">
-                  <button
-                    size="sm"
-                    className="flex-1 bg-cyan-500 p-1 text-[#1a1d23] rounded-[20px] hover:bg-cyan-600 transition-all duration-300"
+                <div className="flex gap-4">
+                  <a
+                    href={project.live}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-white hover:text-cyan-400 flex items-center gap-2 transition-colors font-medium"
                   >
-                    <a
-                      href={project.live}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center justify-center gap-2"
-                    >
-                      <ExternalLink size={16} />
-                      Demo
-                    </a>
-                  </button>
+                    <span>Ver Projeto</span>
+                    <ExternalLink size={14} />
+                  </a>
                 </div>
               </div>
             </div>

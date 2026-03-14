@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Mail, MapPin, Phone, Send } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { toast } from "sonner";
 import sendRequest from "../services/sendRequest";
 const Contact = () => {
@@ -82,91 +82,67 @@ const Contact = () => {
   return (
     <section id="contact" className="scroll-mt-nav py-8">
       <div className="container mx-auto p-4">
-        <div className="text-center mb-16">
-          <h1 className="mb-4 md:text-5xl text-3xl">
-            Entre em{" "}
-            <span className="bg-gradient-to-r from-cyan-700 via-cyan-600 to-cyan-500 bg-clip-text text-transparent text-nowrap font-bold">
-              Contato
-            </span>
+        <div className="text-center mb-20">
+          <h1 className="mb-4 text-3xl md:text-5xl font-light tracking-tight">
+            Entre em <span className="font-medium text-white">Contato</span>
           </h1>
-          <p className="text-md text-[#98a6b3] max-w-2xl mx-auto">
-            Tem um projeto em mente ou quer conversar sobre oportunidades? Envie
-            uma mensagem!
+          <p className="text-sm text-gray-500 max-w-xl mx-auto font-light">
+            Tem um projeto em mente ou quer conversar sobre oportunidades? Envie uma mensagem.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Contact Info */}
-          <div className="space-y-8 animate-fade-in">
+          <div className="space-y-8 animate-fade-in flex flex-col justify-center">
             <div>
-              <h3 className="text-2xl font-bold mb-6">Vamos conversar</h3>
-              <p className="text-[#98a6b3] mb-8">
-                Estou sempre aberto a discutir novos projetos, ideias criativas
-                ou oportunidades para fazer parte de sua visão.
+              <h3 className="text-3xl font-light tracking-tight mb-4">Vamos conversar</h3>
+              <p className="text-gray-400 font-light leading-relaxed max-w-md">
+                Estou sempre aberto a discutir novos projetos, ideias criativas ou oportunidades para fazer parte da sua equipe.
               </p>
             </div>
 
-            <div className="space-y-6">
-              <div className="flex items-start gap-4">
-                <div className="bg-cyan-500/10 p-3 rounded-lg">
-                  <Mail className="text-cyan-500" size={24} />
-                </div>
-                <div>
-                  <h4 className="font-semibold mb-1">E-mail</h4>
-                  <a
-                    href="mailto:mateus09muniz@gmail.com"
-                    className="text-[#98a6b3] hover:text-white text-sm transition-colors"
-                  >
-                    mateus09muniz@gmail.com
-                  </a>
-                </div>
+            <div className="space-y-6 pt-4">
+              <div>
+                <h4 className="text-xs uppercase tracking-widest text-cyan-500 mb-2">E-mail</h4>
+                <a
+                  href="mailto:mateus09muniz@gmail.com"
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
+                  mateus09muniz@gmail.com
+                </a>
               </div>
 
-              <div className="flex items-start gap-4">
-                <div className="bg-cyan-500/10 p-3 rounded-lg">
-                  <Phone className="text-cyan-500" size={24} />
-                </div>
-                <div>
-                  <h4 className="font-semibold mb-1">Telefone</h4>
-                  <a
-                    href="tel:+5588981252883"
-                    className="text-[#98a6b3] text-sm hover:text-white transition-colors"
-                  >
-                    +55 (88) 98125-2883
-                  </a>
-                </div>
+              <div>
+                <h4 className="text-xs uppercase tracking-widest text-cyan-500 mb-2">WhatsApp</h4>
+                <a
+                  href="https://wa.me/5588981252883?text=Ol%C3%A1%2C%20Mateus%21%20Vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
+                  +55 (88) 98125-2883
+                </a>
               </div>
 
-              <div className="flex items-start gap-4">
-                <div className="bg-cyan-500/10 p-3 rounded-lg">
-                  <MapPin className="text-cyan-500" size={24} />
-                </div>
-                <div>
-                  <h4 className="font-semibold mb-1">Localização</h4>
-                  <p className="text-[#98a6b3] text-sm">Ceará, Brasil</p>
-                </div>
+              <div>
+                <h4 className="text-xs uppercase tracking-widest text-cyan-500 mb-2">Localização</h4>
+                <p className="text-gray-300">Ceará, Brasil</p>
               </div>
             </div>
           </div>
 
           {/* Contact Form */}
-          <div className="bg-[#1a1d23] p-8 rounded-lg shadow-[#1a1d23] ">
-            <form onSubmit={handleSubmit} className="space-y-6" noValidate>
+          <div className="bg-transparent p-0 lg:p-8">
+            <form onSubmit={handleSubmit} className="space-y-8" noValidate>
               <div>
-                <label
-                  htmlFor="name"
-                  className="block text-sm font-medium mb-2"
-                >
-                  Nome <span className="text-red-500">*</span>
-                </label>
                 <input
                   id="name"
                   name="name"
                   type="text"
-                  placeholder="Seu nome completo"
+                  placeholder="Seu nome"
                   value={formData.name}
                   onChange={handleChange}
-                  className={`bg-[#111317] border border-[#282c33] transition-all duration-300 focus:ring-2 ring-cyan-500 outline-none placeholder:text-sm container rounded-md p-2 ${
+                  className={`w-full bg-transparent border-b border-gray-800 transition-all duration-300 focus:border-cyan-500 outline-none placeholder:text-gray-600 py-3 text-white font-light ${
                     errors.name ? "border-red-500" : ""
                   }`}
                   required
@@ -174,55 +150,43 @@ const Contact = () => {
                   aria-describedby={errors.name ? "name-error" : undefined}
                 />
                 {errors.name && (
-                  <p id="name-error" className="text-red-500 text-xs mt-1">
+                  <p id="name-error" className="text-red-500 text-xs mt-2 font-light">
                     {errors.name}
                   </p>
                 )}
               </div>
 
               <div>
-                <label
-                  htmlFor="email"
-                  className="block text-sm font-medium mb-2"
-                >
-                  E-mail <span className="text-red-500">*</span>
-                </label>
                 <input
                   id="email"
                   name="email"
                   type="email"
-                  placeholder="seu@email.com"
+                  placeholder="Seu e-mail"
                   value={formData.email}
                   onChange={handleChange}
-                  className={`bg-[#111317] border border-[#282c33] transition-all duration-300 focus:ring-2 ring-cyan-500 outline-none placeholder:text-sm container rounded-md p-2 ${
-                    errors.name ? "border-red-500" : ""
+                  className={`w-full bg-transparent border-b border-gray-800 transition-all duration-300 focus:border-cyan-500 outline-none placeholder:text-gray-600 py-3 text-white font-light ${
+                    errors.email ? "border-red-500" : ""
                   }`}
                   required
                   aria-invalid={!!errors.email}
                   aria-describedby={errors.email ? "email-error" : undefined}
                 />
                 {errors.email && (
-                  <p id="email-error" className="text-red-500 text-xs mt-1">
+                  <p id="email-error" className="text-red-500 text-xs mt-2 font-light">
                     {errors.email}
                   </p>
                 )}
               </div>
 
               <div>
-                <label
-                  htmlFor="message"
-                  className="block text-sm font-medium mb-2"
-                >
-                  Mensagem <span className="text-red-500">*</span>
-                </label>
                 <textarea
                   id="message"
                   name="message"
-                  placeholder="Sua mensagem aqui..."
+                  placeholder="Sua mensagem..."
                   value={formData.message}
                   onChange={handleChange}
-                  className={`bg-[#111317] border border-[#282c33] min-h-[150px] resize-none overflow-auto transition-all duration-300 focus:ring-2 ring-cyan-500 outline-none placeholder:text-sm container rounded-md p-2 ${
-                    errors.name ? "border-red-500" : ""
+                  className={`w-full bg-transparent border-b border-gray-800 min-h-[100px] resize-none overflow-hidden transition-all duration-300 focus:border-cyan-500 outline-none placeholder:text-gray-600 py-3 text-white font-light ${
+                    errors.message ? "border-red-500" : ""
                   }`}
                   required
                   aria-invalid={!!errors.message}
@@ -231,32 +195,31 @@ const Contact = () => {
                   }
                 />
                 {errors.message && (
-                  <p id="message-error" className="text-red-500 text-xs mt-1">
+                  <p id="message-error" className="text-red-500 text-xs mt-2 font-light">
                     {errors.message}
                   </p>
                 )}
               </div>
 
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className="w-full bg-cyan-500 hover:bg-cyan-500/90 disabled:bg-cyan-500/20 py-3 text-lg group rounded-md"
-              >
-                {isSubmitting ? (
-                  <div className="flex justify-center text-[#1a1d23] items-center space-x-3">
-                    <div className="w-4 h-4 border-b-2 border-cyan-500 animate-spin rounded-full"></div>{" "}
-                    <span>Enviando...</span>
-                  </div>
-                ) : (
-                  <div className="flex justify-center text-[#1a1d23] items-center gap-2">
-                    <span>Enviar Mensagem</span>
-                    <Send
-                      className="ml-2 group-hover:translate-x-2 transition-transform"
-                      size={20}
-                    />
-                  </div>
-                )}
-              </button>
+              <div className="pt-4">
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="group flex items-center justify-center gap-3 bg-white hover:bg-gray-100 disabled:bg-gray-400 text-black px-8 py-3 rounded-full text-sm font-medium transition-all w-full md:w-auto"
+                >
+                  {isSubmitting ? (
+                    <div className="flex justify-center items-center space-x-3">
+                      <div className="w-4 h-4 border-b-2 border-black animate-spin rounded-full"></div>{" "}
+                      <span>Enviando...</span>
+                    </div>
+                  ) : (
+                    <>
+                      <span>Enviar Mensagem</span>
+                      <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                    </>
+                  )}
+                </button>
+              </div>
             </form>
           </div>
         </div>
